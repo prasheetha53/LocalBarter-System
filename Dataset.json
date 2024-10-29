@@ -1,0 +1,236 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good evening",
+        "Greetings",
+        "What's up",
+        "How's it going?",
+        "Howdy",
+        "Is anyone here?",
+        "Yo",
+        "Sup",
+        "Hey there",
+        "Hi there"
+      ],
+      "responses": [
+        "Hello! Welcome to our barter platform. How can I assist you today?",
+        "Hi there! Looking to trade something today?",
+        "Hey! What would you like to barter for?",
+        "Greetings! What can I help you with today?",
+        "Welcome to our barter community! How can I assist you?"
+      ]
+    },
+    {
+      "tag": "item_listing",
+      "patterns": [
+        "How do I list an item?",
+        "I want to list my product",
+        "Can I add my item to barter?",
+        "How to put my item for barter?",
+        "Where can I list my items?",
+        "How to list a product for trade?",
+        "How do I add my items for exchange?",
+        "Can I list something?"
+      ],
+      "responses": [
+        "To list an item, simply go to 'List Your Item' in the menu and fill out the form with details like item name, description, and desired trades.",
+        "You can list your items by clicking on 'Post an Item' and adding the necessary information about what you're offering.",
+        "Sure! Go to the 'List a Product' section, and input the details of your item, including any trade requests.",
+        "Listing is easy! Just head over to 'Add Item' and describe what you want to barter."
+      ]
+    },
+    {
+      "tag": "how_it_works",
+      "patterns": [
+        "How does this work?",
+        "Can you explain the process?",
+        "How do I use the barter system?",
+        "How does the exchange work?",
+        "What is the process of bartering?",
+        "How do I trade something?",
+        "What is the trading process?"
+      ],
+      "responses": [
+        "Our platform allows you to post items you want to trade and browse items other users are offering. Once you find something you want, you can propose a trade.",
+        "You simply list your items, browse others, and when you see something you like, you can propose a swap. The other party can accept, reject, or negotiate the trade.",
+        "It's simple: list your items for barter, search for items you’re interested in, and propose trades with other users.",
+        "You upload your item for trade, check out other listings, and offer trades. It’s a swap system!"
+      ]
+    },
+    {
+      "tag": "negotiation",
+      "patterns": [
+        "Can I negotiate a trade?",
+        "How to negotiate an offer?",
+        "Is negotiation allowed?",
+        "Can we negotiate the exchange?",
+        "Can I counter a trade offer?",
+        "How to bargain on a trade?"
+      ],
+      "responses": [
+        "Yes, you can negotiate a trade by sending a counter-offer to the other user.",
+        "Of course! Feel free to propose a different trade and see if the other user is open to negotiation.",
+        "Negotiations are allowed! If you want a different item in return or more, send a counter-trade.",
+        "You can negotiate by suggesting a counter-offer once you receive an initial trade proposal."
+      ]
+    },
+    {
+      "tag": "item_search",
+      "patterns": [
+        "How do I search for items?",
+        "Can I search for something specific?",
+        "Where can I find items?",
+        "How to search for a product?",
+        "Can I look up items?",
+        "How do I find a specific item?"
+      ],
+      "responses": [
+        "You can search for items using the search bar at the top. Simply type what you're looking for and browse the results.",
+        "Use our search feature to find specific items. Just type in the name or category of what you’re looking for.",
+        "To search for items, use the search bar at the top of the page and enter your desired keywords.",
+        "You can easily search for items in the search bar. Type in a keyword and browse the available options."
+      ]
+    },
+    {
+      "tag": "trade_request",
+      "patterns": [
+        "How do I make a trade request?",
+        "Can I offer a trade?",
+        "How to request a trade?",
+        "I want to request a trade",
+        "How do I propose a trade?",
+        "How can I trade my item for something else?"
+      ],
+      "responses": [
+        "Once you find an item you want, click on 'Propose Trade' and select the item from your listings that you wish to offer in exchange.",
+        "To propose a trade, click on the 'Offer a Trade' button on the item you’re interested in and choose the item you want to trade in return.",
+        "You can request a trade by selecting the item you want and proposing what you’re offering in return.",
+        "Making a trade request is easy! Just go to the item you like and click 'Propose Trade' to offer your item in return."
+      ]
+    },
+    {
+      "tag": "user_account",
+      "patterns": [
+        "How do I create an account?",
+        "Can I sign up?",
+        "How to register?",
+        "I want to make an account",
+        "Where can I sign up?",
+        "How do I register?"
+      ],
+      "responses": [
+        "To create an account, click on 'Sign Up' at the top right of the page and fill in your details. You'll be ready to start bartering in no time!",
+        "Creating an account is easy. Click on 'Register' and enter your information to get started.",
+        "You can sign up by going to the 'Register' page, entering your details, and confirming your email.",
+        "Just click 'Sign Up,' provide your information, and you’ll be ready to trade in no time!"
+      ]
+    },
+    {
+      "tag": "profile_update",
+      "patterns": [
+        "How do I update my profile?",
+        "Can I change my details?",
+        "How to update account info?",
+        "I want to update my account",
+        "How to change my personal information?",
+        "Where can I edit my profile?"
+      ],
+      "responses": [
+        "You can update your profile by going to the 'My Account' section and clicking on 'Edit Profile.'",
+        "To change your details, go to 'Account Settings' and update your information.",
+        "You can edit your profile by navigating to 'My Profile' and clicking 'Edit.'",
+        "Go to the 'Profile Settings' section, where you can update your account details."
+      ]
+    },
+    {
+      "tag": "trade_status",
+      "patterns": [
+        "How do I check my trade status?",
+        "Can I track my trades?",
+        "Where can I see my trades?",
+        "How to view current trades?",
+        "How to check ongoing trades?",
+        "Can I check trade progress?"
+      ],
+      "responses": [
+        "You can check the status of your trades in the 'My Trades' section, which shows all ongoing and completed trades.",
+        "To view your trade status, go to 'Trade History,' where you can track all your trade activity.",
+        "Your trade status can be found under 'My Account' in the 'Trade Dashboard.'",
+        "Check the 'My Trades' tab to see updates on your pending or completed trades."
+      ]
+    },
+    {
+      "tag": "item_condition",
+      "patterns": [
+        "Do I need to mention item condition?",
+        "Can I trade used items?",
+        "How to indicate item condition?",
+        "Should I describe my item's condition?",
+        "Is condition important for barter?"
+      ],
+      "responses": [
+        "Yes, it’s important to mention the condition of your item to set clear expectations with other users.",
+        "You should definitely describe the condition of your item, whether it's new, used, or has any defects.",
+        "We recommend being honest about the condition of your item to ensure smooth trades.",
+        "Yes, you can trade used items, but please provide a clear description of their condition."
+      ]
+    },
+    {
+      "tag": "reviews_and_ratings",
+      "patterns": [
+        "Can I leave reviews?",
+        "How do I rate a trade?",
+        "Can I give feedback?",
+        "Where do I leave a review?",
+        "Can I rate a trade experience?",
+        "How to review a trade?"
+      ],
+      "responses": [
+        "You can leave reviews and ratings after completing a trade by going to the 'My Trades' section and selecting the trade you want to review.",
+        "To leave feedback, click on the 'Rate Trade' button after the trade is complete and provide your rating and comments.",
+        "Yes, once your trade is complete, you'll be prompted to leave a review for the other user.",
+        "You can review a trade by clicking on 'Trade History' and providing feedback on your experience."
+      ]
+    },
+    {
+      "tag": "trade_safety",
+      "patterns": [
+        "Is it safe to trade here?",
+        "How do you ensure safe trades?",
+        "What safety measures are in place?",
+        "Are trades secure?",
+        "Can I trust other traders?",
+        "Is bartering safe?"
+      ],
+      "responses": [
+        "We have a rating system and verified user profiles to ensure trust within the community. Always review a user's profile before agreeing to a trade.",
+        "To ensure safety, we recommend only trading with users who have positive ratings. You can also message the trader before finalizing a deal.",
+        "Trades are secure, and we encourage open communication between users. Be sure to review the other user's feedback before agreeing to a swap.",
+        "We prioritize safety by allowing users to rate each other, and you can always report any suspicious behavior."
+      ]
+    },
+    {
+      "tag": "shipping_and_delivery",
+      "patterns": [
+        "Who handles shipping?",
+        "How do I ship the item?",
+        "Is delivery included?",
+        "How to arrange delivery?",
+        "Who pays for shipping?",
+        "Is shipping provided?"
+      ],
+      "responses": [
+        "Shipping is handled between the two traders. You can negotiate who pays for shipping or arrange a local pickup if possible.",
+        "The traders are responsible for handling shipping or delivery arrangements. Be sure to communicate with the other party about your preferences.",
+        "Shipping isn’t included by the platform, but you can discuss shipping details directly with the other user.",
+        "Both parties need to agree on shipping methods and costs. We recommend discussing this before finalizing the trade."
+      ]
+    }
+  ]
+}

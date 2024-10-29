@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalBarter - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">LocalBarter</h1>
+            <nav class="flex items-center space-x-6">
+                <a href="{{ url_for('onboard') }}" class="hover:text-red-500">Onboard</a>
+                <a href="{{ url_for('about') }}" class="hover:text-red-500">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold mb-6">Welcome to LocalBarter!</h1>
+        <p>Join our community by clicking the button below:</p>
+        <a href="{{ url_for('onboard') }}" class="mt-4 inline-block bg-red-500 text-white px-4 py-2 rounded">Get Started</a>
+    </main>
+
+    <footer class="bg-black py-8 text-white mt-auto">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2024 LocalBarter. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

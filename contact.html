@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalBarter - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-gray-800 flex flex-col min-h-screen">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">LocalBarter</h1>
+            <div class="md:hidden">
+                <button onclick="toggleMenu()" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden md:flex items-center space-x-4">
+                <a href="index.html" class="hover:text-red-500">Home</a>
+                <a href="contact.html" class="hover:text-red-500">Contact</a>
+                <a href="onboarding.html" class="hover:text-red-500">About</a>
+                <a href="sign-up.html" class="hover:text-red-500">Sign-up</a>
+                <a href="chat.html" class="hover:text-red-500">Chat</a>
+            </nav>
+            <nav id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+                <div class="flex flex-col items-center py-4 space-y-4">
+                    <a href="index.html" class="hover:text-red-500">Home</a>
+                    <a href="contact.html" class="hover:text-red-500">Contact</a>
+                    <a href="onboarding.html" class="hover:text-red-500">About</a>
+                    <a href="sign-up.html" class="hover:text-red-500">Sign-up</a>
+                    <a href="chat.html" class="hover:text-red-500">Chat</a>
+                </div>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <input type="search" placeholder="Search" class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
+                <a href="wishlist.html" class="text-2xl">🛒</a>
+                <a href="settings.html" class="text-2xl">👤</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <div class="container mx-auto px-4 py-8">
+            <nav class="breadcrumb">
+                <a href="#">Home</a> / <span>Contact</span>
+            </nav>
+
+            <div class="flex flex-col md:flex-row md:space-x-8">
+                <div class="contact-info md:w-1/2 mb-8">
+                    <div class="contact-method mb-4">
+                        <i class="phone-icon"></i>
+                        <h3 class="text-lg font-semibold">Call To Us</h3>
+                        <p>We are available 24/7, 7 days a week.</p>
+                        <p class="font-bold">Phone: +8801611112222</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="email-icon"></i>
+                        <h3 class="text-lg font-semibold">Write To Us</h3>
+                        <p>Fill out our form and we will contact you within 24 hours.</p>
+                        <p class="font-bold">Email: customer@exclusive.com</p>
+                        <p class="font-bold">Email: support@exclusive.com</p>
+                    </div>
+                </div>
+
+                <form class="contact-form md:w-1/2" method="POST" action="/contact">
+                    <div class="form-row mb-4">
+                        <input type="text" name="name" placeholder="Your Name" required class="border rounded-full px-4 py-2 w-full mb-2">
+                        <input type="email" name="email" placeholder="Your Email" required class="border rounded-full px-4 py-2 w-full mb-2">
+                        <input type="tel" name="phone" placeholder="Your Phone" required class="border rounded-full px-4 py-2 w-full mb-2">
+                    </div>
+                    <textarea name="message" placeholder="Your Message" required class="border rounded-md px-4 py-2 w-full mb-4" rows="4"></textarea>
+                    <button type="submit" class="bg-red-500 text-white rounded-full px-6 py-2 hover:bg-red-600">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-8 mt-8 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2024 LocalBarter. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-red-500">Terms of Service</a>
+                <a href="#" class="hover:text-red-500">Privacy Policy</a>
+                <a href="#" class="hover:text-red-500">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalBarter - Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">LocalBarter</h1>
+            <!-- Navigation omitted for brevity -->
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <nav class="text-sm mb-4">
+            <a href="index.html" class="text-red-500 hover:underline">Home</a> / <span class="text-gray-500">My Account</span>
+        </nav>
+
+        <h1 class="text-3xl font-bold mb-8">Welcome back, {{ user.name }}</h1>
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <aside class="md:w-1/4">
+                <h2 class="text-xl font-semibold mb-4">Manage My Account</h2>
+                <ul class="space-y-2">
+                    <li><a href="wishlist.html" class="text-red-500 hover:underline">My Wishlist</a></li>
+                    <li><a href="profile.html" class="text-red-500 hover:underline">My Profile</a></li>
+                </ul>
+            </aside>
+
+            <div class="md:w-3/4 space-y-8">
+                <!-- Current Product Section -->
+                <section class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-2xl font-semibold mb-4">Current Product Offered</h2>
+                    <div class="flex items-center space-x-4">
+                        <img src="{{ current_product.image_url }}" alt="{{ current_product.name }}" class="w-32 h-32 object-cover rounded-lg">
+                        <div>
+                            <h3 class="text-lg font-semibold">{{ current_product.name }}</h3>
+                            <button class="mt-2 px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition">Full Product Description</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Past Exchanges Section -->
+                <section class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-2xl font-semibold mb-4">Your Past Exchanges</h2>
+                    {% if past_exchanges %}
+                        <div class="space-y-4">
+                            {% for exchange in past_exchanges %}
+                                <div class="flex items-center justify-between">
+                                    <div class="text-center">
+                                        <img src="{{ exchange.user_product.image_url }}" alt="{{ exchange.user_product.name }}" class="w-24 h-24 object-cover rounded mx-auto mb-2">
+                                        <h3 class="font-semibold">{{ exchange.user_product.name }}</h3>
+                                        <p class="text-sm text-gray-500">(offered by you)</p>
+                                    </div>
+                                    <div class="text-4xl text-gray-400">↔</div>
+                                    <div class="text-center">
+                                        <img src="{{ exchange.exchanged_product.image_url }}" alt="{{ exchange.exchanged_product.name }}" class="w-24 h-24 object-cover rounded mx-auto mb-2">
+                                        <h3 class="font-semibold">{{ exchange.exchanged_product.name }}</h3>
+                                        <p class="text-sm text-gray-500">(offered by {{ exchange.exchange_partner }})</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <form action="{{ url_for('clear_history') }}" method="POST">
+                            <button class="w-full px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">Clear History</button>
+                        </form>
+                    {% else %}
+                        <p class="text-gray-500">No past exchanges to display.</p>
+                    {% endif %}
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-8 mt-8 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2024 LocalBarter. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="settings.html" class="hover:text-red-500">Terms of Service</a>
+                <a href="settings.html" class="hover:text-red-500">Privacy Policy</a>
+                <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalBarter - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-gray-800 flex flex-col min-h-screen">
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <h1 class="text-2xl font-bold">LocalBarter</h1>
+      <!-- Hamburger Icon for Mobile -->
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-4">
+        <a href="index.html" class="hover:text-red-500">Home</a>
+        <a href="contact.html" class="hover:text-red-500">Contact</a>
+        <a href="onboarding.html" class="hover:text-red-500">About</a>
+        <a href="sign-up.html" class="hover:text-red-500">Sign-up</a>
+        <a href="chat.html" class="hover:text-red-500">Chat</a>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+        <div class="flex flex-col items-center py-4 space-y-4">
+          <a href="index.html" class="hover:text-red-500">Home</a>
+          <a href="contact.html" class="hover:text-red-500">Contact</a>
+          <a href="about.html" class="hover:text-red-500">About</a>
+          <a href="#" class="hover:text-red-500">Sign-up</a>
+          <a href="chat.html" class="hover:text-red-500">Chat</a>
+        </div>
+      </nav>
+
+      <!-- Search and Icons -->
+      <div class="flex items-center space-x-4">
+        <input type="search" placeholder="Search"
+          class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
+        <a href="wishlist.html" class="text-2xl">🛒</a>
+        <a href="settings.html" class="text-2xl">👤</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 flex-grow">
+    <section class="mb-8">
+      <img
+        src="https://images.pexels.com/photos/8837368/pexels-photo-8837368.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Banner" class="w-full rounded-lg shadow-lg">
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">A-Listed Products</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/159438/android-tv-game-controller-game-controller-video-game-controller-android-game-controller-159438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Game Controller">
+            <h3>Pro Gaming Controller</h3>
+            <p>Precision control for competitive gaming.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/887751/pexels-photo-887751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Smartphone">
+            <h3>TechMaster X2</h3>
+            <p>5G-enabled smartphone with AI capabilities.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+            <h3>Ergonomic Wooden Chair</h3>
+            <p>Handcrafted for comfort and style.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Laptop">
+            <h3>UltraBook Pro</h3>
+            <p>Lightweight laptop with powerful performance.</p>
+          </a>
+        </div>
+      </div>
+      <button class="mt-4 highlight-button" onclick="window.location.href='swipe.html'">View All</button>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Browse By Category</h2>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+        <button class="category-button">Electronics</button>
+        <button class="category-button">Home Decor</button>
+        <button class="category-button">Fashion</button>
+        <button class="category-button bg-red-500 text-white hover:bg-red-600">Sports</button>
+        <button class="category-button">Books</button>
+        <button class="category-button">Toys</button>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Top Viewed Products</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Red Dress">
+            <h3>Elegant Evening Gown</h3>
+            <p>Perfect for special occasions.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/3761552/pexels-photo-3761552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Handbag">
+            <h3>Luxury Leather Tote</h3>
+            <p>Spacious and fashionable everyday bag.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/1441596/pexels-photo-1441596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Table Lamp">
+            <h3>Smart Lamp</h3>
+            <p>Adjustable brightness and color temperature.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/3773571/pexels-photo-3773571.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Dining Chair">
+            <h3>Modern Dining Set</h3>
+            <p>Sleek design for contemporary homes.</p>
+          </a>
+        </div>
+      </div>
+      <button class="mt-4 highlight-button" onclick="window.location.href='swipe.html'">View All</button>
+    </section>
+
+    <section class="mb-8">
+      <div class="flex flex-col md:flex-row items-center bg-black text-white p-8 rounded-lg">
+        <div class="md:w-1/2">
+          <h2 class="text-2xl font-semibold mb-4">Enhance Your Music Experience</h2>
+          <p class="mb-4">Experience high-quality sound with our latest speaker.</p>
+          <button class="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600"
+            onclick="window.location.href='swipe.html'">Exchange Now</button>
+        </div>
+        <div class="md:w-1/2">
+          <img
+            src="https://images.pexels.com/photos/2651794/pexels-photo-2651794.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Speaker" class="w-full h-full object-cover rounded-lg">
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">Explore Our Products</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Wireless Earbuds">
+            <h3>TrueSound Earbuds</h3>
+            <p>Immersive audio with noise cancellation.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/51011/pexels-photo-51011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Fitness Tracker">
+            <h3>FitPro Smartwatch</h3>
+            <p>Track your health and stay connected.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/6152267/pexels-photo-6152267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Coffee Maker">
+            <h3>BrewMaster 3000</h3>
+            <p>Barista-quality coffee at home.</p>
+          </a>
+        </div>
+        <div class="product-card">
+          <a href="product-details.html">
+            <img
+              src="https://images.pexels.com/photos/3921695/pexels-photo-3921695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Portable Charger">
+            <h3>PowerBank Ultra</h3>
+            <p>Fast-charging for all your devices.</p>
+          </a>
+        </div>
+      </div>
+      <button class="mt-4 highlight-button" onclick="window.location.href='swipe.html'">View All</button>
+    </section>
+  </main>
+
+  <footer class="bg-black py-8 mt-8 text-white">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2024 LocalBarter. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="index.html" class="hover:text-red-500">Terms of Service</a>
+        <a href="index.html" class="hover:text-red-500">Privacy Policy</a>
+        <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    }
+  </script>
+</body>
+
+</html>

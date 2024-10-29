@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalBarter - Product Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">LocalBarter</h1>
+            <nav class="flex items-center space-x-4">
+                <a href="/" class="hover:text-red-500">Home</a>
+                <a href="/contact" class="hover:text-red-500">Contact</a>
+                <a href="/about" class="hover:text-red-500">About</a>
+                <a href="/signup" class="hover:text-red-500">Sign-up</a>
+                <a href="/chat" class="hover:text-red-500">Chat</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <nav class="text-sm mb-6">
+            <a href="#" class="text-red-500 hover:underline">Home</a> /
+            <span class="text-gray-500">Hario HY-92 Gamepad</span>
+        </nav>
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/2">
+                <img src="https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg" alt="Gamepad" class="w-full h-auto rounded-lg shadow-md">
+                <div class="flex space-x-2 mt-4">
+                    <img src="https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg" alt="Gamepad" class="w-16 h-16 rounded-lg shadow-md">
+                    <img src="https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg" alt="Gamepad" class="w-16 h-16 rounded-lg shadow-md">
+                    <img src="https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg" alt="Gamepad" class="w-16 h-16 rounded-lg shadow-md">
+                    <img src="https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg" alt="Gamepad" class="w-16 h-16 rounded-lg shadow-md">
+                </div>
+            </div>
+
+            <div class="md:w-1/2">
+                <h1 class="text-3xl font-bold mb-4">Hario HY-92 Gamepad</h1>
+                <p class="mb-6 text-gray-600">PlayStation 5 Controller that lights up your gaming experience with adaptive triggers and haptic feedback.</p>
+                
+                <div class="flex space-x-4 mb-6">
+                    <button id="exchange-btn" onclick="handleExchange()" class="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">1-for-1 Exchange</button>
+                    <button id="like-btn" onclick="handleLike()" class="p-2 bg-gray-200 rounded-lg hover:bg-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </button>
+                    <button id="add-to-cart-btn" onclick="addToCart()" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Add to Cart</button>
+                </div>
+
+                <div class="text-sm text-gray-500">1-for-1 exchange</div>
+            </div>
+        </div>
+
+        <div class="mt-10">
+            <h2 class="text-xl font-semibold mb-4">Related Items</h2>
+            <div class="flex">
+                <div class="bg-white rounded-lg shadow-md p-4 w-48">
+                    <img src="https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg" alt="Related Gamepad" class="w-full h-24 object-cover rounded-md mb-2">
+                    <p class="text-gray-700 text-sm">Gamepad</p>
+                    <p class="text-red-500 text-sm mb-2">85% exchange value on Product 1</p>
+                    <button class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-4">
+        <div class="container mx-auto text-center text-sm">
+            &copy; 2024 LocalBarter. All rights reserved.
+        </div>
+        <div class="flex justify-center space-x-4 mt-2 text-xs text-gray-400">
+            <a href="#" class="hover:text-white">Terms of Service</a>
+            <a href="#" class="hover:text-white">Privacy Policy</a>
+            <a href="#" class="hover:text-white">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        async function handleLike() {
+            await fetch('/like', { method: 'POST' });
+            alert("Liked and added to wishlist!");
+        }
+
+        async function handleExchange() {
+            await fetch('/exchange', { method: 'POST' });
+            alert("Exchange initiated!");
+        }
+
+        async function addToCart() {
+            await fetch('/add-to-cart', { method: 'POST' });
+            alert("Added to cart!");
+        }
+    </script>
+</body>
+</html>

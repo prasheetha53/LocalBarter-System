@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalBarter - Login page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <h1 class="text-2xl font-bold">LocalBarter</h1>
+            <!-- Hamburger Icon for Mobile -->
+            <div class="md:hidden">
+                <button onclick="toggleMenu()" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-4">
+                <a href="index.html" class="hover:text-red-500">Home</a>
+                <a href="contact.html" class="hover:text-red-500">Contact</a>
+                <a href="about.html" class="hover:text-red-500">About</a>
+                <a href="sign-up.html" class="hover:text-red-500">Sign-up</a>
+                <a href="chat.html" class="hover:text-red-500">Chat</a>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <nav id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+                <div class="flex flex-col items-center py-4 space-y-4">
+                    <a href="index.html" class="hover:text-red-500">Home</a>
+                    <a href="contact.html" class="hover:text-red-500">Contact</a>
+                    <a href="about.html" class="hover:text-red-500">About</a>
+                    <a href="sign-up.html" class="hover:text-red-500">Sign-up</a>
+                    <a href="chat.html" class="hover:text-red-500">Chat</a>
+                </div>
+            </nav>
+
+            <!-- Search and Icons -->
+            <div class="flex items-center space-x-4">
+                <input type="search" placeholder="Search"
+                    class="border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500">
+                <a href="wishlist.html" class="text-2xl">🛒</a>
+                <a href="settings.html" class="text-2xl">👤</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Shopping cart with smartphone and shopping bags" class="object-cover w-full h-full">
+                </div>
+                <div class="md:w-1/2 p-8">
+                    <h2 class="text-2xl font-bold mb-4">Log in to LocalBarter</h2>
+                    <p class="text-gray-600 mb-6">Enter your details below</p>
+                    <form class="space-y-4" action="/login" method="POST">
+                        <input type="email" name="email" placeholder="Email" required
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <input type="password" name="password" placeholder="Password" required
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <button type="submit"
+                            class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition duration-300">Log
+                            In</button>
+                    </form>
+                    <div class="mt-6">
+                        <button
+                            class="w-full flex items-center justify-center bg-white border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50 transition duration-300">
+                            <img src="https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_google-512.png"
+                                alt="Google icon" class="w-5 h-5 mr-2">
+                            Log in with Google
+                        </button>
+                    </div>
+                    <a href="#" class="block text-center mt-4 text-red-500 hover:underline">Forgot Password?</a>
+                    <p class="text-center mt-6">Don't have an account? <a href="signup.html"
+                            class="text-red-500 hover:underline">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-8 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2024 LocalBarter. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="login.html" class="hover:text-red-500">Terms of Service</a>
+                <a href="login.html" class="hover:text-red-500">Privacy Policy</a>
+                <a href="contact.html" class="hover:text-red-500">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
